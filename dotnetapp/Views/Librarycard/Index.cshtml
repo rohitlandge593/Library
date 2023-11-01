@@ -1,0 +1,20 @@
+@model IEnumerable<dotnetapp.Models.Librarycard>
+    <h4>LibraryCard</h4>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.CardNumber)</th>
+            <th>@Html.DisplayNameFor(m=>m.MemberName)</th>
+        </tr>
+        <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CardNumber</td>
+                <td>@item.MemberName</td>
+            </tr>
+        }
+        </tbody>
+    @Html.ActionLink("Add card","Create","Librarycard")
+

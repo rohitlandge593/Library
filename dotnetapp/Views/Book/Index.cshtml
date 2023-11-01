@@ -1,0 +1,25 @@
+@model IEnumerable<dotnetapp.Models.Book>
+    <h4>Books</h4>
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Author)</th>
+            <th>@Html.DisplayNameFor(m=>m.PublishedYear)</th>
+        </tr>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.PublishedYear</td>
+                </tr>
+            }
+        </tbody>
+@Html.ActionLink("Add Record","Create","Book");
+    </table>
+
+
+

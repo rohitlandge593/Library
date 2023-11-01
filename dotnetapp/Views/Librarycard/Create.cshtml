@@ -1,0 +1,15 @@
+@model dotnetapp.Models.Librarycard
+@using (Html.BeginForm())
+{ 
+    
+    <div>
+        @Html.DisplayNameFor(m=>m.CardNumber)
+        @Html.EditorFor(m=>m.CardNumber)
+    </div>
+    <div>
+        @Html.DisplayNameFor(m=>m.MemberName)
+        @Html.EditorFor(m=>m.MemberName)
+    </div>
+    <input type="submit" value="Add Card"/>
+    <br>
+}
