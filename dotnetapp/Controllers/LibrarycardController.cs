@@ -35,8 +35,10 @@ namespace dotnetapp.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpGet]
         public IActionResult DisplayBooksForLibraryCard(int libraryCardId)
         {
+            TempData[]
             var libraryCard=db.Books.Where (lc=>lc.Librarycard.Id==libraryCardId);
             if(libraryCard!=null)
             {

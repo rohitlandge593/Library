@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
@@ -16,7 +17,7 @@ namespace dotnetapp.Controllers
         }
         public IActionResult Index()
         {
-            var bookList=db.Books;
+            var bookList=db.Books.Include("Librarycard");
             return View(bookList);
         }
         public IActionResult Create()
