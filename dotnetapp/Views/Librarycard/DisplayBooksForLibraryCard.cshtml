@@ -1,13 +1,28 @@
-@model IEnumerable<dotnetapp.Models.Librarycard>
+@model IEnumerable<dotnetapp.Models.Book>
     <h2>Books alloted to Librarycard</h2>
     <br>
     <br>
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(m=>m.Id)</th>
-            <th>@Html.DisplayNameFor(m=>m.Books.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Librarycard.Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.Title)</th>
             <th>@Html.DisplayNameFor(m=>m.Author)</th>
             <th>@Html.DisplayNameFor(m=>m.PublishedYear)</th>
-            <th>@Html.DisplayNameFor(m=>m.Id)</th>
+            
             <th>
         </tr>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Librarycard.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.PublishedYear</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.ActionLink("Back to List","Index")
