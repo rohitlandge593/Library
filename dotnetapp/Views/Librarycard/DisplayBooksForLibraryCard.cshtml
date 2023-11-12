@@ -2,6 +2,15 @@
     <h2>Books alloted to Librarycard</h2>
     <br>
     <br>
+    @using (Html.BeginForm())
+    {
+    @Html.DisplayNameFor(m=>m.Librarycard.Id)
+    @Html.EditorFor(m=>m.LibrarycardId)
+    <input type="submit" value="Find">
+    }
+    
+    @if(Convert.ToInt32(TempData["State"])==1)
+    {
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(m=>m.Id)</th>
@@ -25,4 +34,5 @@
             }
         </tbody>
     </table>
+    }
     @Html.ActionLink("Back to List","Index","Librarycard")
