@@ -35,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeWNhcmQvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/coder/project/workspace/dotnetapp/Views/Librarycard/DisplayBooksForLibraryCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeWNhcmQvRGlzcGxheUJvb2tzRm9yTGlicmFyeUNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/coder/project/workspace/dotnetapp/Views/Librarycard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeWNhcmQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

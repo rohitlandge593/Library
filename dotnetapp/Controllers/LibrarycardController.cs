@@ -37,7 +37,7 @@ namespace dotnetapp.Controllers
         }
         public IActionResult DisplayBooksForLibraryCard(int libraryCardId)
         {
-            var libraryCard=db.Librarycards.Include(lc=>lc.Books)
+            var libraryCard=db.Librarycards.Include("Books")
                                             .FirstOrDefault(lc=>lc.Id==libraryCardId);
             if(libraryCard!=null)
             {
