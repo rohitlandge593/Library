@@ -1,11 +1,11 @@
-@model IEnumerable<dotnetapp.Models.Book>
+@model IEnumerable<dotnetapp.Models.Librarycard>
     <h2>Books alloted to Librarycard</h2>
     <br>
     <br>
     @using (Html.BeginForm())
     {
-    @Html.DisplayNameFor(m=>m.LibrarycardId)
-    <input type=
+    @Html.DisplayNameFor(m=>m.Id)
+    @Html.EditorFor(m=>m.Id)
     <input type="submit" value="Find">
     }
     
@@ -14,9 +14,9 @@
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(m=>m.Id)</th>
-            <th>@Html.DisplayNameFor(m=>m.Librarycard.Id)</th>
-            <th>@Html.DisplayNameFor(m=>m.Title)</th>
-            <th>@Html.DisplayNameFor(m=>m.Author)</th>
+            <th>@Html.DisplayNameFor(m=>m.Book.Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.Book.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Book.Author)</th>
             <th>@Html.DisplayNameFor(m=>m.PublishedYear)</th>
             
             <th>

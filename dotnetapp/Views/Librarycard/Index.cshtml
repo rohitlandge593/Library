@@ -3,7 +3,7 @@
     <br>
     @Html.ActionLink("Add card","Create","Librarycard")
     <br>
-    @Html.ActionLink("Search Books allot for Id","DisplayBooksForLibraryCard","Librarycard")
+    
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(m=>m.Id)</th>
@@ -17,6 +17,7 @@
                 <td>@item.Id</td>
                 <td>@item.CardNumber</td>
                 <td>@item.MemberName</td>
+                <td>@Html.ActionLink("Search Books allot for Id","DisplayBooksForLibraryCard","Librarycard")</td>
             </tr>
         }
     </tbody>
