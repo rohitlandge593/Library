@@ -36,20 +36,9 @@ namespace dotnetapp.Controllers
 
         }
         [HttpGet]
-        public IActionResult DisplayBooksForLibraryCard()
+        public IActionResult DisplayBooksForLibraryCard(int libraryCardId)
         {
-            var v=db.Librarycards.Include("Books");
-            TempData["State"]=0;
-            return View(v);
-            
-        }
-        [HttpPost]
-        public IActionResult DisplayBooksForLibraryCard(string libraryCardIdStr)
-        {
-            int libraryCardId=Convert.ToInt32(libraryCardIdStr);
-
-            TempData["State"]=1;
-            var libraryCard=db.Librarycards.Where (lc=>lc.Id==libraryCardId);
+            var libraryCard=db.Books.Where (lc=>lc.LibrarycardId==libraryCardId);
             return View(libraryCard);
         }
         
