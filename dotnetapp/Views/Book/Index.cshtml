@@ -6,6 +6,7 @@
             <th>@Html.DisplayNameFor(m=>m.Title)</th>
             <th>@Html.DisplayNameFor(m=>m.Author)</th>
             <th>@Html.DisplayNameFor(m=>m.PublishedYear)</th>
+            <th>@Html.DisplayNameFor(m=>m.Librarycard.Id)</th>
         </tr>
         <tbody>
             @foreach(var item in Model)
@@ -15,6 +16,7 @@
                     <td>@item.Title</td>
                     <td>@item.Author</td>
                     <td>@item.PublishedYear</td>
+                    <td>@item.Librarycard.Id</td>
                 </tr>
             }
         </tbody>
