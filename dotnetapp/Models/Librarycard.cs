@@ -17,7 +17,7 @@ namespace dotnetapp.Models
         [MaxLength(100)]
         public string? MemberName{get;set;}
         public DateTime ExpiryDate{get;set;}
-        public ICollection<Book> bk{get;set;}
+        public ICollection<Book>? Books{get;set;}
 
     }
 }

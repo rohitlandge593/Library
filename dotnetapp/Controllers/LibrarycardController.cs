@@ -35,5 +35,18 @@ namespace dotnetapp.Controllers
             return RedirectToAction("Index");
 
         }
+        public IActionResult DisplayBooksForLibraryCard(int libraryCardId)
+        {
+            var libraryCard=db.Librarycards.Include(lc=>lc.Books)
+                                            .FirstOrDefault(lc=>lc.Id==libraryCardId);
+            if(libraryCard!=null)
+            {
+                return View(libraryCard);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
