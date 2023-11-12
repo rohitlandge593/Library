@@ -1,5 +1,9 @@
 @model IEnumerable<dotnetapp.Models.Librarycard>
     <h4>LibraryCard</h4>
+    <br>
+    @Html.ActionLink("Add card","Create","Librarycard")
+    <br>
+    @Html.ActionLink("Search Books allot for Id","DisplayBooksForLibraryCard","Librarycard")
     <table class="table">
         <tr>
             <th>@Html.DisplayNameFor(m=>m.Id)</th>
@@ -15,6 +19,7 @@
                 <td>@item.MemberName</td>
             </tr>
         }
-        </tbody>
-    @Html.ActionLink("Add card","Create","Librarycard")
+    </tbody>
+    
+
 
